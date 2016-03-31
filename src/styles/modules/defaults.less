@@ -1,0 +1,95 @@
+*:focus {color: @black;}
+
+a{
+    color: @blue;
+    text-decoration: underline;
+    &:focus {color: @blue;}
+    &:hover{
+        color: red;
+        text-decoration: none;
+        transition: 0.25s;
+    }
+    &:not(:hover) {
+        transition: 0.25s;
+    }
+}
+p {
+    margin: 0;
+}
+b, strong {
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.form-control {
+    box-shadow: none;
+}
+
+.left{ float: left;}
+.right{ float: right;}
+label{
+    font-weight: normal;
+}
+textarea:focus,
+input:focus{
+    box-shadow: none;
+}
+*:focus,
+*:visited,
+a:focus{
+    //color: @brand-color-blue;
+    outline: none;
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /*Firefox 1-3*/
+    -webkit-box-sizing: border-box; /* Safari */
+}
+/*---------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: @black;
+    margin: 0;
+}
+h1{
+}
+h2{
+}
+h3{
+}
+h4{
+}
+h5{
+    font-size: 16px;
+}
+.brand-font{ font-family: @brand-font;}
+
+mark{
+    background: none;
+    color: @brand-color;
+    padding: 0 @site-padding / 2;
+}
+.center-el{ text-align: center;}
+
+.container {
+    position: relative;
+    @media (min-width: 1200px) {
+        width: 1200px;
+    }
+}
+.text {
+    &-left {
+        text-align: left;
+    }
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+}

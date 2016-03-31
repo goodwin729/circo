@@ -1,0 +1,36 @@
+.nav {
+    margin-top: 80px;
+    .clearfix;
+    &-list {
+        float: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &-item {
+        color: @white;
+        float: left;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 15px;
+        margin-left: @site-padding * 5;
+        padding: @site-padding / 3 0;
+        text-transform: uppercase;
+        &:first-child { margin-left: 0; }
+    }
+    &-link {
+        color: @white;
+    }
+    &--light {
+        .nav-link {
+            color: @white;
+            &:hover { color: @gray-dark; }
+        }
+    }
+    &--dark {
+        .nav-link {
+            color: @black;
+            &:hover { color: @gray-dark; }
+        }
+    }
+}

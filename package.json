@@ -5,7 +5,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^3.8.11"
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.8.11",
+    "gulp-imagemin": "^2.4.0",
+    "imagemin-pngquant": "^4.2.2"
   },
   "devDependencies": {
     "browser-sync": "^2.2.3",
