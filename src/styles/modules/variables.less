@@ -2,10 +2,8 @@
 @border-radius-base: 0;
 
 /*----fonts----*/
-@brand-font: 'Opensans-regular', serif;
-@brand-font-Lato: 'Lato', sans-serif;
-@brand-font-light: 'Opensans-light', serif;
-@brand-font-semibold: 'Opensans-semibold', serif;
+@base-font: 'Lato', sans-serif;
+@brand-font: 'Great Vibes', cursive;
 @font-size-base: 14px;
 
 /*---general---*/
@@ -18,10 +16,11 @@
 
 /*---colors----*/
 @white: #fdfdff;
-@white-dark: #f6f6f6;//
+@white-dark: #fcfcfc;
 @gray-light: #e7e7e7;//
-@gray: #cbcbcb;//
+@gray: #ccc;//
 @gray-dark: #989898;
+@gray-darkness: #525252;
 @black: #333;
 @black-dark: #000;
 
@@ -36,18 +35,14 @@
 
 
 body,html{
-    font-family: @brand-font-Lato;
+    background-color: @white-dark;
+    font-family: @base-font;
+    font-weight: 300;
     height: 100%;
     position: relative;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  &.mobile {
-    overflow: hidden;
-    .menu-drop-mobile {
-      top: 0;
-    }
-  }
 }
 * {
     -webkit-box-sizing: border-box;

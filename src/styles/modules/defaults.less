@@ -67,7 +67,24 @@ h4{
 h5{
     font-size: 16px;
 }
-.brand-font{ font-family: @brand-font;}
+.separate {
+    background-color: @gray-darkness;
+    border: none;
+    height: 1px;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    &:before {
+        content: "";
+        background-color: @black;
+        height: 2px;
+        left: 50%;
+        margin-left: -@site-padding;
+        position: absolute;
+        top: 0;
+        width: @site-padding * 2;
+    }
+}
 
 mark{
     background: none;

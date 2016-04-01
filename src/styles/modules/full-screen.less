@@ -4,8 +4,42 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    z-index: -1;
+    z-index: 0;
     &-video {
         width: 100%;
+    }
+    &-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    &-title {
+        color: @black;
+        display: block;
+        font-family: @base-font;
+        font-size: 48px;
+        font-weight: 300;
+        line-height: 36px;
+        letter-spacing: 10px;
+        margin: @site-padding 0;
+        text-transform: uppercase;
+    }
+    &-subtitle {
+        color: @black;
+        display: block;
+        font-family: @brand-font;
+        font-size: 48px;
+        line-height: 36px;
+        margin: @site-padding 0;
+    }
+    &-btn {
+        margin-top: @site-padding;
     }
 }

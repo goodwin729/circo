@@ -1,0 +1,66 @@
+.article {
+    &-title {
+        color: @black;
+        font-size: 36px;
+        font-weight: 100;
+        line-height: 36px;
+        margin: 10px 0;
+        text-transform: uppercase;
+    }
+    &-subtitle {
+        font-size: 18px;
+        font-style: italic;
+        line-height: 20px;
+        margin: @site-padding * 3 0 @site-padding *2 0;
+    }
+    &-info {
+        margin: 10px 0;
+        .clearfix;
+        &-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        &-item {
+            float: left;
+            margin-right: @site-padding * 3;
+            &:last-child { margin-right: 0; }
+        }
+        &-title {
+            float: left;
+            font-size: 16px;
+            font-weight: 100;
+            line-height: 20px;
+            margin-right: @site-padding / 3;
+        }
+        &-value {
+            font-family: @brand-font;
+            font-size: 26px;
+            line-height: 20px;
+            opacity: 0.7;
+        }
+        &-link {
+            color: @gray;
+        }
+    }
+    &-image {
+        margin: @site-padding * 2 0;
+        position: relative;
+        width: 100%;
+    }
+    &-text {
+        text-align: justify;
+        font-size: 13px;
+        font-weight: 300;
+        margin: @site-padding * 2 0;
+    }
+    &-cite {
+        color: @gray;
+        display: block;
+        font-family: @brand-font;
+        font-size: 36px;
+        line-height: 40px;
+        opacity: 0.7;
+        text-align: center;
+    }
+}
