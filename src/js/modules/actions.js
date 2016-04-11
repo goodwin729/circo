@@ -68,17 +68,9 @@ $(document).ready(function(){
     });
 
 
-    //search-block
-    $( ".search-trigger" ).click(function(event) {
-        $( ".search" ).toggleClass( "is-active" );
-        $( ".search-drop-input" ).focus();
-    });
-    $(document).click( function(event){
-        if( $(event.target).closest( ".search" ).length )
-            return;
-        $( ".search" ).removeClass( "is-active" );
-        $( ".search-drop-input" ).blur()
-        event.stopPropagation();
+    // blog btn-more
+    $( ".blog-btn-more" ).click(function(event) {
+        $(this).closest(".blog-item").addClass("is-active");
     });
 
 

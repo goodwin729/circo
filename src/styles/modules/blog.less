@@ -1,6 +1,9 @@
 .blog {
     &-content {
+        height: @site-padding * 46;
+        overflow: hidden;
         width: 960px;
+        .transition-0_5s;
     }
     &-list {
         list-style: none;
@@ -8,7 +11,45 @@
         padding: 0;
     }
     &-item {
-        margin: @site-padding * 6 0;
+        padding: @site-padding * 6 0;
+        position: relative;
+        .transition-0_5s;
+        &:before {
+            content: "";
+            background-color: @black;
+            display: block;
+            height: 2px;
+            left: 50%;
+            margin-left: -@site-padding;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: @site-padding * 2;
+            .transition-0_5s;
+        }
+        &:after {
+            content: "";
+            background-color: @black;
+            bottom: -3px;
+            display: block;
+            height: 2px;
+            left: 50%;
+            margin-left: -@site-padding;
+            opacity: 0;
+            position: absolute;
+            width: @site-padding * 2;
+            .transition-0_5s;
+        }
+        &.is {
+            &-active {
+                border-bottom: 1px solid @gray-darkness;
+                border-top: 1px solid @gray-darkness;
+                &:before { opacity: 1; }
+                &:after { opacity: 1; }
+                .blog-btn-more { display: none; }
+                //.blog-content { height: auto; }
+            }
+        }
     }
     &-date {
         border: 1px solid @black;
@@ -31,5 +72,30 @@
             text-transform: uppercase;
         }
     }
-    &-date {}
+    &-section {
+        border-top: 1px solid @gray-darkness;
+        padding: @site-padding * 3 0;
+        position: relative;
+        &:first-child {
+            border-top: none;
+            padding-top: 0;
+            &:before { display: none; }
+        }
+        &:before {
+            content: "";
+            background-color: @black;
+            display: block;
+            height: 2px;
+            left: 50%;
+            margin-left: -@site-padding;
+            position: absolute;
+            top: 0;
+            width: @site-padding * 2;
+        }
+    }
+    &-btn {
+        &-more {
+            margin-left: 6px;
+        }
+    }
 }
