@@ -1,1 +1,33 @@
-.footer {}
+.footer {
+    background-color: @white-dark;
+    display: block;
+    height: @site-padding * 14;
+    &-list {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+    &-item {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 36px;
+        padding: 0 @site-padding * 2;
+        text-transform: uppercase;
+        width: auto;
+    }
+    &-link {
+        color: @black;
+        letter-spacing: 2px;
+        vertical-align: middle;
+        &:hover {
+            color: @gray-dark;
+        }
+    }
+}

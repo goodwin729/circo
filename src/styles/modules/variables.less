@@ -75,6 +75,12 @@ input:-ms-input-placeholder {text-overflow: ellipsis;}
     margin-top: @site-padding * 2;
   }
 }
+.page {
+    &-content {
+        padding-top: @site-padding * 8 - @site-padding / 3;
+        & + .map-wrapper { margin-top: 0; }
+    }
+}
 body {
   a {
     text-decoration: none;

@@ -1,0 +1,111 @@
+.project {
+    position: relative;
+    &-header {
+        margin-bottom: @site-padding * 2;
+    }
+    &-sidebar {
+        float: right;
+        margin-right: @site-padding * 20;
+        width: 270px;
+        &-item {
+            margin: @site-padding * 2 0;
+            &:first-child { margin-top: 0; }
+            &:last-child { margin-bottom: 0; }
+        }
+    }
+    &-content {
+        position: relative;
+    }
+
+    &-title {
+        color: @black;
+        font-size: 36px;
+        font-weight: 100;
+        line-height: 36px;
+        margin: 10px 0;
+        text-transform: uppercase;
+    }
+    &-subtitle {
+        display: block;
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 30px;
+        margin: @site-padding * 2 0;
+        text-transform: uppercase;
+        & + .project-text,
+        & + .project-list { margin-top: -@site-padding; }
+    }
+    &-text {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 30px;
+        margin: @site-padding * 2 0;
+    }
+    &-info {
+        margin: 10px 0;
+        .clearfix;
+        &-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        &-item {
+            float: left;
+            margin-right: @site-padding * 3;
+            &:last-child { margin-right: 0; }
+        }
+        &-title {
+            float: left;
+            font-size: 16px;
+            font-weight: 100;
+            line-height: 20px;
+            margin-right: @site-padding / 3;
+        }
+        &-value {
+            font-family: @brand-font;
+            font-size: 26px;
+            line-height: 20px;
+        }
+        &-link {
+            color: @gray-dark;
+        }
+    }
+    &-image {
+        &-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        &-item {
+            margin: @site-padding * 2 0;
+        }
+        &-img {
+            margin-left: -275px;
+            position: relative;
+            width: calc(~"100% +" 275px);
+        }
+    }
+    &-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        &--dash {
+            &-item {
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 30px;
+                padding-left: 10px;
+                position: relative;
+                &:before {
+                    content: "";
+                    background-color: @black;
+                    height: 1px;
+                    left: 0;
+                    position: absolute;
+                    top: 50%;
+                    width: 4px;
+                }
+            }
+        }
+    }
+}
