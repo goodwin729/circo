@@ -1,20 +1,71 @@
 $( window ).resize(function() {
-       //code here
 });
+
+(function($){
+
+    //carousel
+    $(window).load(function(){
+        $('.portfolio--masonry').masonry({
+            // options
+            gutter: 0,
+            percentPosition: true,
+            itemSelector: '.portfolio-item'
+        });
+        $(window).resize(function() {
+            if(window.innerWidth > 1900) {
+                $('.portfolio--masonry').masonry({
+                    // options
+                    fitWidth: true
+                });
+            } else {
+                $('.portfolio--masonry').masonry({
+                    // options
+                    fitWidth: false
+                });
+            }
+        });
+    });
+
+})(jQuery);
+
 $(document).ready(function(){
 
-    //masonry order
-    $('.portfolio--masonry').masonry({
-        // options
-        gutter: 0,
-        itemSelector: '.portfolio-item'
+    $(".carousel-list").owlCarousel({
+        loop: false,
+        margin: 0,
+        responsiveClass: true,
+        lazyLoad:true,
+        nav: false,
+        responsive:{
+            0:{
+                items: 1,
+                loop: true
+            },
+            600:{
+                items: 3,
+                loop: true
+            },
+            1000:{
+                items: 6,
+                loop: false
+            }
+        }
+    });
+    var owl = $('.owl-carousel');
+    owl.on('mousewheel', '.owl-stage', function (e) {
+        if (e.deltaY>0) {
+            owl.trigger('next.owl');
+        } else {
+            owl.trigger('prev.owl');
+        }
+        e.preventDefault();
     });
 
     //sledge hover
-    $(".portfolio-item").each( function() { $(this).hoverdir(); } );
+    $(".portfolio-item, .carousel-item").each( function() { $(this).hoverdir(); } );
 
     //sticky sidebar
-    $('.project-sidebar').parent().stick_in_parent()
+    $('.project-sidebar, .sidebar').parent().stick_in_parent()
         .on('sticky_kit:bottom', function(e) {
             $(this).parent().css('position', 'static');
         })

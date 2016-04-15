@@ -13,7 +13,8 @@
 //= modules/jquery.hoverdir.js
 //= modules/modernizr.custom.97074.js
 //= modules/masonry.pkgd.js
-////= modules/jquery.lazyload.js
+//= modules/owl.carousel.js
+//= modules/jquery.mousewheel.js
 
 /*
  * Custom

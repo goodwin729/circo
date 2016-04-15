@@ -6,6 +6,7 @@
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.12.1",
+    "font-awesome": "^4.6.1",
     "gulp": "^3.8.11",
     "gulp-imagemin": "^2.4.0",
     "imagemin-pngquant": "^4.2.2"
