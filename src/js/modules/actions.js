@@ -3,7 +3,7 @@ $( window ).resize(function() {
 
 (function($){
 
-    //carousel
+    //masonry
     $(window).load(function(){
         $('.portfolio--masonry').masonry({
             // options
@@ -30,6 +30,7 @@ $( window ).resize(function() {
 
 $(document).ready(function(){
 
+    //carousel
     $(".carousel-list").owlCarousel({
         loop: false,
         margin: 0,
@@ -38,14 +39,14 @@ $(document).ready(function(){
         nav: false,
         responsive:{
             0:{
-                items: 1,
-                loop: true
-            },
-            600:{
                 items: 3,
                 loop: true
             },
-            1000:{
+            768:{
+                items: 4,
+                loop: true
+            },
+            1025:{
                 items: 6,
                 loop: false
             }
@@ -65,7 +66,7 @@ $(document).ready(function(){
     $(".portfolio-item, .carousel-item").each( function() { $(this).hoverdir(); } );
 
     //sticky sidebar
-    $('.project-sidebar, .sidebar').parent().stick_in_parent()
+    $(".project-sidebar, .sidebar").parent().stick_in_parent()
         .on('sticky_kit:bottom', function(e) {
             $(this).parent().css('position', 'static');
         })
@@ -92,16 +93,13 @@ $(document).ready(function(){
 
 
     //mobile-menu
-    $( ".btn-mobile-trigger" ).click(function(event) {
-        $( ".nav-mobile" ).toggleClass( "is-active" );
-        $( "body" ).toggleClass( "is-hidden" );
+    $( ".nav-btn" ).click(function(event) {
+        $( ".nav" ).addClass( "is-active" );
+        $( "body" ).addClass( "is-hidden" );
     });
-    $(document).click( function(event){
-        if( $(event.target).closest( ".nav-mobile" ).length )
-            return;
-        $( ".nav-mobile" ).removeClass( "is-active" );
+    $( ".nav-close" ).click(function(event) {
+        $( ".nav" ).removeClass( "is-active" );
         $( "body" ).removeClass( "is-hidden" );
-        event.stopPropagation();
     });
 
     //external links attribute
