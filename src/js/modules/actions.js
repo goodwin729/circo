@@ -114,6 +114,23 @@ $(document).ready(function(){
 
     $("a[href^='#']").attr('href', 'javascript:;');
 
+
+    /*$(window).resize(function() {
+        if ($(this).width() < 767) {
+            $(".project-sidebar, .sidebar").parent().stick_in_parent(function(event){
+                $(this).css("background", "red");
+                event.stopPropagation();
+            })
+        }
+    });
+    $(window).onload(function() {
+        if ($(this).width() < 767) {
+            $(".project-sidebar, .sidebar").parent(function(){
+                $(this).css("background", "red");
+            })
+        }
+    });*/
+
 });
 
 
