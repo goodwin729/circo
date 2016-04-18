@@ -30,8 +30,32 @@ $( window ).resize(function() {
 
 $(document).ready(function(){
 
-    //carousel
-    $(".carousel-list").owlCarousel({
+//==carousel-group==//
+    //carousel-auto
+    $(".carousel--auto .carousel-list").owlCarousel({
+        loop: true,
+        margin: 0,
+        responsiveClass: true,
+        lazyLoad: true,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive:{
+            0:{
+                items: 2
+            },
+            768:{
+                items: 4
+            },
+            1025:{
+                items: 4
+            }
+        }
+    });
+
+    //carousel-scroll
+    $(".carousel--scroll .carousel-list").owlCarousel({
         loop: false,
         margin: 0,
         responsiveClass: true,
@@ -52,7 +76,7 @@ $(document).ready(function(){
             }
         }
     });
-    var owl = $('.owl-carousel');
+    var owl = $('.carousel--scroll .owl-carousel');
     owl.on('mousewheel', '.owl-stage', function (e) {
         if (e.deltaY>0) {
             owl.trigger('next.owl');
