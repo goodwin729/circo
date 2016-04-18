@@ -126,6 +126,14 @@ $(document).ready(function(){
         $( "body" ).removeClass( "is-hidden" );
     });
 
+    //side-menu
+    $( ".nav--side .nav-btn" ).click(function(event) {
+        $( ".nav--side" ).addClass( "is-active" );
+    });
+    $( ".nav--side .nav-close" ).click(function(event) {
+        $( ".nav--side" ).removeClass( "is-active" );
+    });
+
     //external links attribute
     $("body").on('click',
         "a[href^='http']:not([href*='" + document.domain + "']), " +
