@@ -169,13 +169,14 @@
         float: left;
         height: 100vh;
         position: relative;
-        width: @site-padding * 12;
+        width: @site-padding * 8;
         .transition-0_5s;
         @media only screen and (max-width: 1200px) {
             display: none;
         }
         .nav {
             margin-top: 0;
+            z-index: 5;
             &-list {
                 animation: fade-in 0.5s 1;
                 display: none;
@@ -213,8 +214,43 @@
                 padding: @site-padding 0;
             }
         }
+        .logo {
+            bottom: @site-padding * 8;
+            left: 0;
+            opacity: 0;
+            text-align: center;
+            width: 100%;
+            &-wrapper {
+                align-items: center;
+                background-color: @white;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                left: 0;
+                margin-top: 0;
+                opacity: 1;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                white-space: nowrap;
+                z-index: 4;
+                .transition-0_5s;
+                .logo {
+                    bottom: 0;
+                    left: 0;
+                    opacity: 1;
+                    position: relative;
+                    width: auto;
+                    .rotate-90;
+                    &-img { margin-right: @site-padding * 2; }
+                }
+            }
+        }
         &.is-active {
             width: @site-padding * 18;
+            .logo { opacity: 1; }
+            .logo-wrapper { opacity: 0; }
             .nav-list {
                 display: flex;
                 opacity: 1;
@@ -229,7 +265,7 @@
     &--content {
         height: 100vh;
         overflow: auto;
-        width: calc(~"100% - " (@site-padding * 12));
+        width: calc(~"100% - " (@site-padding * 8));
         .transition-0_5s;
         @media only screen and (max-width: 1200px) {
             height: auto;
