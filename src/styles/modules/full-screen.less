@@ -6,6 +6,7 @@
     }
     &--screen {
         background-color: @gray-light;
+        height: 100vh;
         max-height: 100vh;
         overflow: hidden;
         position: fixed;
@@ -20,11 +21,14 @@
             justify-content: center;
             height: 100%;
             left: 0;
+            padding: @site-padding * 2 0;
             position: absolute;
             text-align: center;
             top: 0;
             width: 100%;
             z-index: 1;
+            &--bottom { align-items: flex-end; }
+            &--top { align-items: flex-start; }
         }
         &-title {
             color: @black;
@@ -36,6 +40,9 @@
             letter-spacing: 10px;
             margin: @site-padding 0;
             text-transform: uppercase;
+            @media screen and (max-width: 767px) {
+                font-size: 30px;
+            }
         }
         &-subtitle {
             color: @black;
@@ -44,9 +51,24 @@
             font-size: 48px;
             line-height: 36px;
             margin: @site-padding 0;
+            @media screen and (max-width: 767px) {
+                font-size: 30px;
+                line-height: 26px;
+            }
         }
         &-btn {
             margin-top: @site-padding;
+        }
+        &--half {
+            .slideshow {
+                &:after {
+                    display: none;
+                }
+                &-image {
+                    left: 50%;
+                    width: 50%;
+                }
+            }
         }
     }
 }
