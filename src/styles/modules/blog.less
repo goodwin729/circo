@@ -52,7 +52,7 @@
                 &:before { opacity: 1; }
                 &:after { opacity: 1; }
                 .blog-btn-more { display: none; }
-                //.blog-content-wrapper { height: auto; }
+                .blog-btn-close { opacity: 1; }
             }
         }
     }
@@ -101,6 +101,36 @@
     &-btn {
         &-more {
             margin-left: 6px;
+        }
+        &-close {
+            height: @site-padding * 2;
+            opacity: 0;
+            position: absolute;
+            right: 18px;
+            top: 10px;
+            width: @site-padding * 2;
+            z-index: 5;
+            .transition-0_5s;
+            &:before {
+                content: "";
+                background-color: @black;
+                height: 1px;
+                left: 0;
+                position: absolute;
+                top: 50%;
+                width: @site-padding * 2;
+                .rotate-60;
+            }
+            &:after {
+                content: "";
+                background-color: @black;
+                height: 1px;
+                left: 0;
+                position: absolute;
+                top: 50%;
+                width: @site-padding * 2;
+                .rotate-120;
+            }
         }
     }
 }
