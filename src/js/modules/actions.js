@@ -1,5 +1,3 @@
-$( window ).resize(function() {
-});
 
 (function($){
 
@@ -94,6 +92,15 @@ $(document).ready(function(){
         .on('sticky_kit:unbottom', function(e) {
             $(this).parent().css('position', 'relative');
         });
+    if ($(this).width() < 767) {
+        $(".project-sidebar, .sidebar").trigger("sticky_kit:detach");
+    }
+
+    $(window).resize(function() {
+        if ($(this).width() < 767) {
+            $(".project-sidebar, .sidebar").trigger("sticky_kit:detach");
+        }
+    });
 
     //sledge hover
     $(".portfolio-item, .carousel-item").each( function() { $(this).hoverdir(); } );
@@ -109,18 +116,6 @@ $(document).ready(function(){
         $(this).closest(".blog-item").removeClass("is-active");
         var contentHeight = 690;
         $(this).closest(".blog-item").find(".blog-content-wrapper").css("height", contentHeight);
-    });
-
-
-    //select-dropdown
-    $( ".select" ).click(function(event) {
-        $(this).toggleClass( "is-active" );
-    });
-    $(document).click( function(event){
-        if( $(event.target).closest( ".select" ).length )
-            return;
-        $( ".select" ).removeClass( "is-active" );
-        event.stopPropagation();
     });
 
 

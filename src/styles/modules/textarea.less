@@ -1,6 +1,7 @@
 .textarea {
     background-color: @white;
     border: 1px solid @black;
+    border-radius: 0;
     display: inline-block;
     color: @black;
     font-size: 13px;
@@ -10,6 +11,8 @@
     text-transform: uppercase;
     vertical-align: middle;
     width: 100%;
+
+    -webkit-appearance: none;
     @media only screen and (max-width: 1200px) {
         min-height: @site-padding * 10;
     }
