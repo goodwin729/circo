@@ -150,14 +150,10 @@ $(document).ready(function(){
     $("a[href^='#']").attr('href', 'javascript:;');
 
 
-    /*$(window).resize(function() {
-        if ($(this).width() < 767) {
-            $(".project-sidebar, .sidebar").parent().stick_in_parent(function(event){
-                $(this).css("background", "red");
-                event.stopPropagation();
-            })
-        }
-    });*/
+    // tree menu
+    $( ".tree-btn" ).click(function(event) {
+        $( ".tree" ).toggleClass( "is-active" );
+    });
 
 });
 
