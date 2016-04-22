@@ -1,5 +1,6 @@
 .blog {
     &-content {
+        width: 100%;
         &-wrapper {
             height: @site-padding * 46;
             overflow: hidden;
@@ -19,6 +20,12 @@
         padding: @site-padding * 6 0;
         position: relative;
         .transition-0_5s;
+        @media only screen and (max-width: 1200px) {
+            padding: @site-padding * 3 0;
+        }
+        @media only screen and (max-width: 767px) {
+            padding: @site-padding * 2 0;
+        }
         &:before {
             content: "";
             background-color: @black;

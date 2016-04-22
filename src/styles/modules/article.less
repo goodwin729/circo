@@ -60,6 +60,9 @@
         font-weight: 300;
         line-height: 30px;
         margin: @site-padding * 2 0;
+        @media only screen and (max-width: 767px) {
+            line-height: 28px;
+        }
     }
     &-cite {
         color: @gray-dark;
@@ -67,5 +70,18 @@
         font-family: @brand-font;
         font-size: 36px;
         line-height: 40px;
+    }
+    &-video {
+        height: 542px;
+        width: 100%;
+        @media only screen and (max-width: 1200px) {
+            height: 460px;
+        }
+        @media only screen and (max-width: 992px) {
+            height: 310px;
+        }
+        @media only screen and (max-width: 767px) {
+            height: auto;
+        }
     }
 }
